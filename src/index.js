@@ -10,6 +10,7 @@ import Profile from './components/profile';
 import About from './components/about';
 import PostItem from './components/post_item_details';
 import NotFound from './components/page-not-found';
+import Lifecycle from './components/lifecycle';
 
 class App extends Component{
   render(){
@@ -26,7 +27,8 @@ ReactDOM.render(
         <Link to="/">Home</Link> &nbsp;&nbsp;&nbsp;
         <Link to="/posts">Posts</Link> &nbsp;&nbsp;&nbsp;
         <Link to="/profile">Profile</Link>&nbsp;&nbsp;&nbsp;
-        <Link to="/about">About</Link>
+        <Link to="/about">About</Link>&nbsp;&nbsp;&nbsp;
+        <Link to="/lifecycle">Lifecycle</Link>
         <hr/>
       </header>
       <Switch>
@@ -35,6 +37,7 @@ ReactDOM.render(
         <Route path="/profile" component={Profile}></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/posts/:id" component={PostItem}></Route>
+        <Route path="/lifecycle" component={Lifecycle}></Route>
         <Route exact path="*" component={NotFound}></Route>
       </Switch>
      
